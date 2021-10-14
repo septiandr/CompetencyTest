@@ -1,0 +1,16 @@
+{{> header}}
+{{> navbar}}
+<div id="index-container">
+{{#each provinsi}}
+<div id="prov-list">
+<label for="view"></label><img  src="{{photo}}"></label>
+<label>{{this.nama}}</label>
+<label>{{this.diresmikan}}</label>
+<label>{{this.pulau}}</label><br>
+<a name="view" id="view" href="view-prov/{{this.id}}"><img style="width:30px; height:30px;" src="../public/stylesheets/icon/research.png"></a>
+<a href="edit-prov/{{this.id}}"><img style="width:30px; height:30px;"  src="../public/stylesheets/icon/edit (1).png"></a>
+<a href="delete-prov/{{this.id}}"><img style="width:30px; height:30px;"  src="../public/stylesheets/icon/delete.png"></a>
+</div>
+{{/each}}
+</div>
+{{> footer}}

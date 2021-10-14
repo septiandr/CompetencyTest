@@ -1,0 +1,39 @@
+{{> header}}
+{{> navbar}}
+
+<form id='form' action="/edit-prov" method="post" enctype="multipart/form-data">
+   <label for="photo">Photo</label>
+   <input name="id" value="{{provinsi.id}}" hidden>
+     <input style="margin-left:460px; margin-bottom:20px;" type="hidden" name="oldImage"  value="{{provinsi.photo}}">
+    <div style="margin-left:460px; margin-bottom:20px;" id="preview-thumbnail"></div>
+    <input name="photo" type="file" id="file" onchange="handleChange()">
+  </div>
+  <div class="form-group">
+    <label >Nama</label>
+    <input type="text" class="form-control" id="nama" placeholder="Nama" name="namaProv" value="{{provinsi.nama}}">
+  </div>
+ <div class="form-group">
+    <label >diresmikan</label>
+    <input type="date" class="form-control" id="provinsi" placeholder="Provinsi" name="diresmikanProv" defaultValue="{{provinsi.diresmikan}}">
+  </div>
+  <div class="form-group">
+ 
+  <div class="form-group">
+    <label >Pulau</label>
+    <input type="text" class="form-control" id="diresmikan"name="pulau" value="{{provinsi.pulau}}">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div>
+    
+</div>
+<script>
+    function handleChange(){
+        const previewElement = document.getElementById('preview-thumbnail');
+        const value = URL.createObjectURL(event.target.files[0]);
+        console.log(value);
+        previewElement.innerHTML = `<img src="${value}" style="width: 250px;" class="mt-3"/>`
+    }
+</script>
+{{> footer}}

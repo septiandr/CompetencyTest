@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>hitung Harga</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        margin-top: 100px;
+    }
+    
+    label input {
+        width: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    button {
+        margin-bottom: 30px;
+    }
+</style>
+
+<body>
+    <h1>Hitung Harga Barang</h1>
+
+    <label>Barang A
+        <input type="number" id="barangA"></input>
+    </label>
+    <label>Barang B
+        <input type="number" id="barangB"></input>
+    </label>
+    <label>Barang C
+        <input type="number" id="barangC"></input>
+    </label><br>
+    <button type="button" onclick="harga()" class="btn btn-success">Cek Harga</button>
+
+    <div>Total Harga : <span id="totalHarga"></span></div>
+    <div>Potongan Harga : <span id="potongan"></span></div>
+    <div>Total Bayar : <span id="totalBayar"></span></div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+    <script src="hitungHarga.js"></script>
+</body>
+
+</html>

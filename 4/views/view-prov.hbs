@@ -1,0 +1,23 @@
+{{> header}}
+{{> navbar}}
+<div for="label" class="a">
+<a style="margin-right: 50px !important;" class="btn btn-outline-success my-2 my-sm-0" href="/kab/{{this.id}}">Tambah Kabupaten</a>
+</div>
+ 
+<div id="view-container">
+    
+{{#each kabupaten}}
+<div id="view-kab">
+<input name="id" value="{{this.id}}" hidden>
+<div id="kab-list">
+<img src="{{this.photo}}">
+<label>{{this.nama}}</label>
+<label>{{this.diresmikan}}</label><br>
+<a href="edit-kab/{{this.id}}"><img style="width:30px; height:30px;" src="../public/stylesheets/icon/edit (1).png"></a>
+<a href="delete-kab/{{this.id}}"><img style="width:30px; height:30px;" src="../public/stylesheets/icon/delete.png"></a>
+</div>
+</div>
+
+{{/each}}
+</div>
+{{> footer}}
